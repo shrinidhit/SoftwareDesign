@@ -8,11 +8,13 @@ Created on Sun Feb  9 17:52:54 2014
 def get_primes(n):
     """ Returns a list of all prime integers in the range [1,n] """
     return_val = []
-    isPrime = True
 
     for i in range(1,n+1):
-        for j in range(1,i):
+        isPrime = True
+
+        for j in range(2,i):
             if i % j == 0:
+                print "i,j " + str(i) + "," + str(j)
                 isPrime = False
         if isPrime:
             return_val.append(i)
